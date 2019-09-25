@@ -1,0 +1,19 @@
+<mat-toolbar role="heading">
+    <span>
+        <mat-icon *ngIf="show" svgIcon="baricon" (click)="onToggleSidenav()"></mat-icon>
+    </span>
+
+    <!-- <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button> -->
+
+    <span>UNITEDHEALTH GROUP</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <!-- <span>Logout</span> -->
+    <button class="button" (click)="loginpage()">Logout</button>
+
+</mat-toolbar>
+<app-sidenav (close)=onClose($event) [open]="navbar"> </app-sidenav>

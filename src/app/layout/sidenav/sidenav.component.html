@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="side" [opened]="open" role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink='firstcmp'>UnitedHealth Care</a>
+      <a mat-list-item routerLink='secondcmp'>OPTUM</a>
+      <a mat-list-item routerLink='mychart'>Charts Example</a>
+      <a mat-list-item routerLink='d3-chart'>D3 Example</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
