@@ -11,33 +11,33 @@ import { NgModel } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-model: any = {};
-// email123:string="test123";
-  constructor(private route:Router) { }
+  model: any = {};
+  // email123:string="test123";
+  //email:string="test";
+  constructor(private route: Router) { }
 
   ngOnInit() {
-    
+
   }
-  
+
   // Login login=new NgModel(
   //  loginpage() 
   //  {
   //    this.route.navigate(['home']);
   //   }
- 
-    register(form)
-    {
-      // alert(this.email123);
-      if(form.value.Email=="test" && form.value.Password=="test"){
-        localStorage.setItem('mail',form.value.Email );
-        // console.log(localStorage.getItem('mail'));
-          this.route.navigate(['home']);
-      }
-        else{
-          alert("Invalid user");
-        }
-      
+
+  register(form) {
+    // alert(this.email123);
+    if (form.value.Email == "test" && form.value.Password == "test") {
+      localStorage.setItem('mail', form.value.Email);
+      // console.log(localStorage.getItem('mail'));
+      this.route.navigate(['home']);
+    }
+    else {
+      alert("Invalid user");
     }
 
-   
+  }
+
+
 }
