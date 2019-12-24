@@ -6,15 +6,19 @@ import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@a
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  innerWidth:number;
-@Input() open:boolean
+
+  innerWidth: number;
+  @Input() open: boolean
+
   constructor() { }
-@Output() close = new EventEmitter<boolean>();
+
+  @Output() close = new EventEmitter<boolean>();
+
   ngOnInit() {
   }
-    // this.close.emit(this.open);
-    @HostListener('window:resize', ['$event']) 
-    onResize(event) {
+  // this.close.emit(this.open);
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
 
     this.innerWidth = window.innerWidth;
     console.log(this.innerWidth);
