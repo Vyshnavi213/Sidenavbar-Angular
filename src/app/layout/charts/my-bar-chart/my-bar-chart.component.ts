@@ -15,7 +15,7 @@ export class MyBarChartComponent implements OnInit {
   ngOnInit() {
     let ctx = <HTMLCanvasElement>document.getElementById('charts');
     let charts = new Chart(ctx, {
-      type: 'bar',
+      type: 'horizontalBar',
       data: {
         labels: ["2015-01", "2015-02", "2015-03", "2015-04", "2015-05", "2015-06", "2015-07", "2015-08", "2015-09", "2015-10", "2015-11", "2015-12"],
 
